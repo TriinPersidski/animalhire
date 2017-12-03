@@ -11,8 +11,8 @@ body {
 /* Global */
 
 .container {
-  width: 80%;
-  margin: auto;
+  width: 1024px;
+  margin: 0 auto;
   overflow: hidden;
 }
 
@@ -20,6 +20,7 @@ h1 {
   font-weight: bold;
   font-family: "Comic Sans MS", Arial, sans-serif;
   font-size: 2rem;
+  color: white;
 }
 
 h2 {
@@ -28,40 +29,69 @@ h2 {
   color: #8cc63e;
   margin-top: 0.66rem;
   margin-bottom: 0.66rem;
+  text-transform: uppercase;
 }
 
 h4 {
   font-size: 1.3rem;
-  }
+}
 
 ul {
  margin: 0;
  padding: 0;
 }
 
+.button_1 {
+  height: 2.3rem;
+  background-color: #8cc63e;
+  border: 2px solid #8cc63e;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: white;
+  font-family: Helvetica;
+  font-size: 1rem;
+}
+.button_1:hover {
+  background-color: white;
+  color: gray;
+  font-weight: normal;
+  border: 2px solid #8cc63e;
+  padding: 0.5rem 1rem;
+  text-align: center;
+}
+
 /* Header */
 
 header {
   background-color: white;
-  min-height: 3.8rem;
+  min-height: 4rem;
   border-bottom: #e1d9c7 3px solid;
   padding-top: 0.1rem;
+  margin-bottom: 0;
   }
 
 #branding {
   float: left;
-  width: 60%;
-}
-  #branding img {
+  }
+
+#branding img {
     display: block;
-    height: 3rem;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+    max-height: 4rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
     margin-bottom: 0;
     border: 0px solid black;
     float: left;
-  }
+    }
 
+#branding span {
+  font-size: 2.1rem;
+  font-weight: bold;
+  font-family: "Comic Sans MS", Helvetica, sans-serif;
+  color: #8cc63e;
+  text-align: center;
+  margin-top: 0rem;
+}
 header nav ul {
   float: right;
   padding-top: 1rem;
@@ -91,6 +121,7 @@ header a:hover {
   font-weight: normal;
   border: 2px solid #8cc63e;
   padding: 1rem 1rem;
+  text-align: center;
 }
 
 /* Showcase */
@@ -101,66 +132,350 @@ main {
 }
 
 #showcase {
-  min-height: 31rem;
+  min-height: 45rem;
   background-color: #8cc63e;
   background-image: url("../images/2000x700-camel-main.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .headline {
-  margin-top: 12rem;
-  width: 23rem;
-  padding: 0.8rem 2rem;
-  background-color: black;
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 1rem 2rem;
+  background-color: ;
   color: white;
-  opacity: 0.7;
+  opacity: 1;
+  text-align: center;
 }
 
 .headline h1 {
-  font-size: 3rem;
+  font-size: 3.6rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 10px #000000;
+}
+
+.headline h4 {
+  font-family: Arial, sans-serif;
+  font-size: 1.8rem;
+  color: #8cc63e;
+  font-weight: bold;
+  text-shadow: 2px 2px 8px #000000;
+}
+
+.headline p {
+  font-size: 1.4rem;
+  text-align: center;
+  font-weight: normal;
+  text-shadow: 1px 1px 8px dimgray;
 }
 
 /* Navigation */
 
-.mobile-nav {
+nav .mobile-nav {
   display: none;
   }
 
-nav#main-menu {
-  background-color:  #e1d9c7;
+nav#navigation {
+  width: 100%;
+
 }
-nav#main-menu ul {
-    width: 70%;
-    padding: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+nav .deskdop-nav {
+  background-color: white;
+  max-width: 100%;
+  height: 3.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 3px solid #e1d9c7;
+}
+
+nav .deskdop-nav li {
+  display: inline;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+}
+
+nav .deskdop-nav li a {
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+
+nav .deskdop-nav a:hover {
+  color: dimgray;
+  font-weight: bold;
+  border: 2px solid #8cc63e;
+  padding: 0.75rem 1rem;
+  background-color: white;
+}
+
+/* Tagline */
+
+#tagline {
+  text-align: center;
+  margin-top: 4rem;
+  height: auto;
+  background-color: white;
+}
+
+#tagline h2 {
+  text-align: center;
+  font-size: 2.75rem;
+  text-shadow: 1px 1px 1px dimgray;
+}
+
+#tagline p {
+  text-align: center;
+  font-size: 1.4rem;
+  color: black;
+}
+
+/* Animal Services */
+/* boxes*/
+
+.services {
+  display: flex;
+  justify-content: space-between;
+  margin: 3em 0px 0px;
+}
+
+#boxes .box {
+  width: 24%;
+  border: 0px solid black;
+}
+
+.box {
+  padding: 0;
+  margin: 0;
+}
+
+.service-image {
+  height: auto;
+  margin: 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   }
 
-nav#main-menu li {
-    display: inline;
-    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
-    background-color:  #e1d9c7;
+figcaption {
+  color: black;
+  background-color: white;
+  padding: 0.5rem 0;
+  text-align: center;
+  font-size: 1.4rem;
+}
+figcaption a {
+  text-decoration: none;
+  color: black;
+}
+figcaption a:hover {
+  text-decoration:underline;
+  color: #8cc63e;
+}
+#boxes .box img {
+  max-width: 100%;
+}
+
+/* Meet Our Animals */
+
+#animals .boxes {
+  border-bottom: 3px solid #e1d9c7;
+  margin: 0 auto;
+  background-color: #fcfcfc;
+  padding-bottom: 2rem;
+}
+
+#animals .box {
+  width: 100%;
+  height: auto;
+}
+
+#animals .description-upper, #animals .description-lower {
+  height: auto;
+  width: 100%;
+  display: flex;
+  margin-top: 6rem;
+}
+
+#animals .description, #animals description-image {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#animals .description-upper .description {
+  padding: 0 2rem 1rem 1rem;
+}
+
+#animals .description-lower .description {
+  padding: 0 1rem 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+#animals .description-image img {
+  width: 99%;
+  max-width: 28rem;
+  padding: 0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+  img:hover {
+    box-shadow: 0 0 3px 3px rgba(140, 198, 62, 1);
+}
+
+#animals .description-lower .description-image img {
+  margin-left: 4px;
+}
+
+.box .description h3 {
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+/* Need to add button path */
+#animals .description-lower .description .button_1 {
+ position: relative;
+ margin-top: 3rem;
+}
+
+/* Hire Us */
+
+#hire #tagline {
+  background-color: #e1d9c7; /*beige */
+  text-shadow: 1px 1px 1px dimgray;
+}
+
+#hire {
+  background-color: #e1d9c7;
+  padding-top: 4rem;
+  padding-bottom: 3rem;
+  margin-top: 3rem;
+  border-bottom: 3px solid #8cc63e;
+}
+
+#hire figcaption {
+  background-color: #e1d9c7; /*beige */
+  padding-top: 1rem;
+  font-weight: bold;
+}
+
+#hire .box {
+  padding: 1.4rem;
+  width: 30%;
+  text-align: left;
+}
+
+/* Contact and form */
+
+#contact {
+  background-color: white; /* white */
+}
+
+#contact .boxes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: auto;
+  margin-top: 1rem;
+  padding-bottom: 4rem;
   }
 
-nav#main-menu li a {
-    color: black;
+#contact .contactinfo, #contact .quote {
+width: 40%;
+}
+
+#contact .contactinfo {
+  padding-right: 3rem;
+}
+
+#contact .contactinfo h2 {
+  font-size: 2.75rem;
+  font-family: "Comic Sans MS", Arial, sans-serif;
+  color: #8cc63e;
+}
+
+/* Enquiry form */
+
+.quote h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+  padding-top: 1rem;
+}
+
+#contact input  {
+ padding: 0.5rem;
+ height: auto;
+ width: 85%;
+ margin: 0.5rem 0;
+ box-sizing: border-box;
+ border: none;
+ border-bottom: 2px solid #e1d9c7;
+ color: gray;
+ font-style: italic;
+ font-size: 0.9rem;
+}
+
+#contact input[type=text]:focus {
+    border: 2px solid #e1d9c7;  /* beige */
+}
+
+#contact textarea {
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    resize: none;
+}
+
+.button_2 {
+  height: 38px;
+  background-color: #8cc63e;
+  border: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: white;
+  font-family: Helvetica;
+  font-size: 1rem;
+  width: 85%;
+}
+
+.button_2:hover {
+  background-color: white;
+  color: gray;
+  font-weight: normal;
+  border: 2px solid #8cc63e;
+  padding: 0.5rem 1rem;
+  text-align: center;
+}
+
+#contact input[type=button_2], input[type=submit], input[type=reset] {
+    background-color: #8cc63e;
+    border: none;
+    color: white;
+    padding: 16px 32px;
     text-decoration: none;
-    text-transform: uppercase;
-    font-size: 1rem;
-    font-weight: 400;
-  }
+    margin: 4px 2px;
+    cursor: pointer;
+}
+/* Footer */
 
-nav#main-menu .current a {
-    color: #8cc63e;
-    font-weight: bold;
-    }
-
-nav#main-menu a:hover {
-    color: dimgray;
-    font-weight: bold;
-    border: 2px solid #8cc63e;
-    padding: 1rem 1rem;
-  }
+footer .container {
+  border-top: 3px solid #e1d9c7;  /* beige */
+  max-height: 7rem;
+  background-color: white;
+  text-align: center;
+  color: gray; /* gray */
+  padding-top: 2rem;
+}
