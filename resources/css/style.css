@@ -595,7 +595,7 @@ header .mobile img {
   top: auto;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: auto;
   background-color: rgba(0, 0, 0, 0.65);
 }
 
@@ -679,24 +679,129 @@ header .mobile img {
 }
 
 #hire * {
-
 }
 
-  #hire .services {
-    flex-direction: column;
-    flex-wrap: wrap;
-    width: 90%;
-    }
+#hire .services {
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 90%;
+}
 
 #hire .box {
-    width: 100%;
-    margin: 0 auto;
-    padding-left: 2rem;
-    padding-right: 2rem;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .service-image img {
   max-height: 4rem;
   width: auto;
 }
+}
+
+/* Contact and form */
+
+#contact {
+  background-color: white; /* white */
+}
+
+#contact .boxes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: auto;
+  margin-top: 1rem;
+  padding-bottom: 4rem;
+  }
+
+#contact .contactinfo, #contact .quote {
+width: 40%;
+}
+
+#contact .contactinfo {
+  padding-right: 3rem;
+}
+
+#contact .contactinfo h2 {
+  font-size: 2.75rem;
+  font-family: "Comic Sans MS", Arial, sans-serif;
+  color: #8cc63e;
+}
+
+/* Enquiry form */
+
+.quote h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+  padding-top: 1rem;
+}
+
+#contact input  {
+ padding: 0.5rem;
+ height: auto;
+ width: 85%;
+ margin: 0.5rem 0;
+ box-sizing: border-box;
+ border: none;
+ border-bottom: 2px solid #e1d9c7;
+ color: gray;
+ font-style: italic;
+ font-size: 0.9rem;
+}
+
+#contact input[type=text]:focus {
+    border: 2px solid #e1d9c7;  /* beige */
+}
+
+#contact textarea {
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    resize: none;
+}
+
+.button_2 {
+  height: 38px;
+  background-color: #8cc63e;
+  border: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: white;
+  font-family: Helvetica;
+  font-size: 1rem;
+  width: 85%;
+}
+
+.button_2:hover {
+  background-color: white;
+  color: gray;
+  font-weight: normal;
+  border: 2px solid #8cc63e;
+  padding: 0.5rem 1rem;
+  text-align: center;
+}
+
+#contact input[type=button_2], input[type=submit], input[type=reset] {
+    background-color: #8cc63e;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+/* Footer */
+
+footer .container {
+  border-top: 3px solid #e1d9c7;  /* beige */
+  max-height: 7rem;
+  background-color: white;
+  text-align: center;
+  color: gray; /* gray */
+  padding-top: 2rem;
 }
