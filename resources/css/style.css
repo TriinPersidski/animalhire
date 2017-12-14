@@ -574,7 +574,7 @@ header .mobile img {
 /* Hire Us  */
 
 #hire #tagline {
-  text-shadow: 1px 1px 1px dimgray;
+  text-shadow: 1px 1px 2px white;
 }
 
 #hire {
@@ -589,36 +589,22 @@ header .mobile img {
   margin-top: 3rem;
   }
 
-#hire:before { /* dark Overlay */
-  position: absolute;
-  content: "";
-  top: auto;
-  left: 0;
-  width: 100%;
-  height: auto;
-  background-color: rgba(0, 0, 0, 0.65);
-}
-
-#hire * {
-  position: relative; /* Makes elements display above overlay. */
-}
-
 #hire .services {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
+  justify-content: space-between;
+  align-items: center;
   height: auto;
-  max-width: 80%;
+  width: 90%;
   margin: 0 auto;
 }
+
 #hire .box {
   background-color: #e1d9c7;
   opacity: 0.9;
   width: 27%;
-  margin: 2rem;
+  margin-bottom: 3rem;
   padding: 1rem 1.5rem;
-
 }
 
 #hire .box.packages, #hire .box.location {
@@ -626,12 +612,13 @@ header .mobile img {
 }
 
 #hire .services .service-image {
-  width: 100%;
+  width: 60%;
+  margin: 0 auto;
 }
 
 .service-image img {
   display: block;
-  width: 50%;
+  width: 60%;
   margin: 0 auto;
   padding-bottom: 1.5rem;
 }
@@ -647,44 +634,39 @@ header .mobile img {
 #hire figcaption:hover {
   color: #8cc63e;
   font-size: 1.6rem;
-  text-shadow: 1px 1px 1px gray;
+  text-shadow: 1px 1px 1px white;
 }
 
 @media only screen and (max-width: 1024px) {
   #hire .services {
     flex-direction: row;
     flex-wrap: wrap;
-    max-width: 100%;
+    width: 100%;
     padding: 0;
-    margin: 0;
-  }
+    margin: 0 auto;
+}
 
-  #hire .box {
-    max-width: 100%;
-    }
+#hire .box {
+  width: 75%;
+  margin: 0 auto;
+}
 }
 
 @media only screen and (max-width: 760px) {
  #hire {
    width: 100%;
- }
+}
 
 #hire {
   background-image: none;
   background-color: #e1d9c7;
 }
 
-#hire:before { /* dark Overlay */
-  display: none;
-}
-
-#hire * {
-}
-
 #hire .services {
   flex-direction: column;
   flex-wrap: wrap;
   width: 90%;
+  border-bottom: 3px solid white
 }
 
 #hire .box {
@@ -703,48 +685,70 @@ header .mobile img {
 /* Contact and form */
 
 #contact {
-  background-color: white; /* white */
+  background-color: #f3f3f3;
 }
 
+#contact .container {
+  width: 960px;
+  margin: 0 auto;
+  padding: 0;
+}
 #contact .boxes {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   height: auto;
-  margin-top: 1rem;
+  padding-top: 4rem;
   padding-bottom: 4rem;
   }
 
 #contact .contactinfo, #contact .quote {
-width: 40%;
+ width: 45%;
 }
 
 #contact .contactinfo {
   padding-right: 3rem;
+  line-height: 1.5rem;
 }
 
 #contact .contactinfo h2 {
-  font-size: 2.75rem;
-  font-family: "Comic Sans MS", Arial, sans-serif;
+  font-size: 3rem;
+  font-family: 'Comic Sans MS', 'Gochi Hand', Arial, sans-serif;
+  text-align: center;
   color: #8cc63e;
+}
+
+#contact .contactinfo h2:hover {
+  color: #4a4a4a;
 }
 
 /* Enquiry form */
 
-.quote h2 {
-  font-family: Arial, Helvetica, sans-serif;
-  color: black;
-  padding-top: 1rem;
+.quote {
+  background-color: white;
+  padding: 1rem 2rem 2rem 2rem;
+  border-radius: 10px;
+  border: 2px solid white;
 }
 
-#contact input  {
+.quote .quote-title {
+  text-align: center;
+}
+
+.quote h4 {
+  color: #4a4a4a;
+  padding-top: 0rem;
+  font-size: 1.5rem;
+}
+
+.quote input  {
  padding: 0.5rem;
  height: auto;
- width: 85%;
- margin: 0.5rem 0;
+ width: 100%;
+ margin: 0 auto;
  box-sizing: border-box;
  border: none;
- border-bottom: 2px solid #e1d9c7;
+ border-bottom: 3px solid #e1d9c7;
  color: gray;
  font-style: italic;
  font-size: 0.9rem;
@@ -755,34 +759,35 @@ width: 40%;
 }
 
 #contact textarea {
-    width: 100%;
-    height: 150px;
-    padding: 12px 20px;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    background-color: white;
-    resize: none;
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  resize: none;
 }
 
 .button_2 {
-  height: 38px;
+  height: 2.75rem;
   background-color: #8cc63e;
   border: 0;
   padding-left: 20px;
   padding-right: 20px;
   color: white;
-  font-family: Helvetica;
-  font-size: 1rem;
-  width: 85%;
+  font-size: 1.2rem;
+  width: 100%;
+  margin-top: 1rem;
+  border-radius: 6px;
 }
 
 .button_2:hover {
-  background-color: white;
-  color: gray;
-  font-weight: normal;
+  background-color: #8cc63e;
+  color: #4a4a4a;
+  font-weight: bold;
   border: 2px solid #8cc63e;
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 1.3rem;
   text-align: center;
 }
 
@@ -795,13 +800,72 @@ width: 40%;
     margin: 4px 2px;
     cursor: pointer;
 }
+
+@media only screen and (max-width: 1024px) {
+  #contact {
+    width: 100%;
+}
+#contact .boxes {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;
+}
+
+#contact .container {
+  width: 100%;
+  padding: 0;
+  margin: 0 auto;
+}
+
+#contact .contactinfo, #contact .quote {
+  width: 75%;
+  padding-bottom: 2rem;
+  margin: 0 auto;
+}
+
+#contact .contactinfo {
+  padding-left: 2rem;
+}
+
+#contact .contactinfo h2 {
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+}
+}
+
+@media only screen and (max-width: 760px) {
+  #contact {
+    width: 100%;
+}
+
+.contactinfo h2 {
+  font-size: 1.5rem;
+}
+
+.button_2 {
+  height: 3rem;
+}
+}
+
 /* Footer */
+
+footer {
+  height: auto;
+}
 
 footer .container {
   border-top: 3px solid #e1d9c7;  /* beige */
-  max-height: 7rem;
   background-color: white;
   text-align: center;
-  color: gray; /* gray */
-  padding-top: 2rem;
+  color: #4a4a4a;
+  padding: 1rem 0;
+}
+
+@media only screen and (max-width: 760px) {
+ footer p {
+   font-size: 0.675rem;
+ }
 }
